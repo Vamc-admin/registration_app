@@ -8,13 +8,13 @@ pipeline{
         stage ('clean workspace'){
 
             steps{
-                cleanWS()
+                cleanWs()
             }
         }
         stage ('checkout SCM'){
 
             steps{
-                git branch: "master",credentialsId: 'github', url: 'https://github.com/Vamc-admin/registration_app.git'
+                git branch: 'master',credentialsId: 'github', url: 'https://github.com/Vamc-admin/registration_app.git'
             }
         }
         stage ('Build Application'){
